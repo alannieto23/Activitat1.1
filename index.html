@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ping Pong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="juego">
+      <h1>Ping Pong</h1>
+
+      <div class="marcador">
+        <div class="lado">
+          <span class="nombre">Tú</span>
+          <span id="puntosJugador" class="puntos">0</span>
+        </div>
+        <div class="lado">
+          <span class="nombre">Máquina</span>
+          <span id="puntosMaquina" class="puntos">0</span>
+        </div>
+      </div>
+
+      <div class="mesa">
+        <canvas id="canvas" width="800" height="500"></canvas>
+        <div id="mensaje" class="mensaje">
+          <p id="textoMensaje">Gana quien llegue a 7 puntos</p>
+          <button id="botonJugar">Jugar</button>
+        </div>
+      </div>
+
+      <p class="ayuda">
+        Mueve tu pala con el ratón, el dedo o las flechas ↑ ↓. Pulsa Espacio
+        para pausar.
+      </p>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+:root {
+  --fondo: #13233f;
+  --mesa: #1f5fa8;
+  --borde-mesa: #6b3f1d;
+  --linea: #f4f7fb;
+  --pelota: #ff8a1f;
+  --texto: #eef3fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Nunito", system-ui, sans-serif;
+}
+
+.juego {
+  width: 100%;
+  max-width: 820px;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Bungee", Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  color: var(--pelota);
+  margin-bottom: 12px;
+}
+
+.marcador {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12px;
+}
+
+.lado {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.puntos {
+  font-family: "Bungee", Impact, sans-serif;
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1;
+}
+
+.mesa {
+  position: relative;
+  border: 10px solid var(--borde-mesa);
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--mesa);
+  cursor: none;
+  touch-action: none;
+}
+
+.mensaje {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background: rgba(19, 35, 63, 0.75);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 700;
+}
+
+.mensaje.oculto {
+  display: none;
+}
+
+button {
+  font-family: "Bungee", Impact, sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 999px;
+  background: var(--pelota);
+  color: var(--fondo);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--linea);
+  outline-offset: 3px;
+}
+
+.ayuda {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
